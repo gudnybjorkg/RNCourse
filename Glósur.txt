@@ -1,0 +1,10 @@
+Glósur
+
+* ios og android möppurnar eru til að keyra upp á sitthvoru platforminu. Mun líklegast aldrei koma við það nema það sé eitthvað low level stuff. 
+* node_modules mappan inniheldur öll dependencies sem er verið að nota í projectinu. 
+* index.android.js og ios.js eru þær sem er aðallega notað
+	entry point fyrir applcation
+	þetta er það sem ræsist fyrst fyrir það platform sem er að keyra. Eins og App delegate eða main. 
+	byrja eins þegar project er búið til en breytast svo smám sama
+
+	
