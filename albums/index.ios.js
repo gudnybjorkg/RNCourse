@@ -7,8 +7,8 @@ import Header from './src/Components/Header'; // Import Header skránni sem á s
 
 // Create a component
 const App = () => (
-  //<Text> Some text </Text>
-  <Header /> 
+  //<Text> Some text </Text> // JSX útgáfan sem mun compilast yfir í JS element. 
+  <Header headerText={'Albums!'} />  // sendir inn propertyið headerText með textanum Albums!
 );
 
 //Render it to the device
