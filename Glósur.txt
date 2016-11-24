@@ -7,4 +7,60 @@ Glósur
 	þetta er það sem ræsist fyrst fyrir það platform sem er að keyra. Eins og App delegate eða main. 
 	byrja eins þegar project er búið til en breytast svo smám sama
 
+* component : object/eitthvað sem verður rendarað á skjáinn.
+	buinn til með því að skrifa javaskript function
+	const App = () => {
+  		// þetta er component sem heitir App
+	}
+	einn component per file. Til að búa til annan component þa´er best practise að gera nýjan file. 
+	- Eingngu rót component notar app AppRegistry og eina skiptið sem það er notað. App er því rótar componentinn. Restin eru child. Öll önnur component (child) eru exportuð. 
+	Export statements eru að gera componentin aðgengileg í öðrum componentum. 
+	- comonrnt nesting: með því að nota allskonar comonent saman til að búa til component. 
+		T.d. Header er nestaður í App component. 
+		import Header from './src/components/header' <- þetta imprtar Header.js skránni í tiltekna skrá með því að vísa í skránna.  
+							source directory = ./
+	Nota component sem er skilgreindur í annarri skrá t.d. Header.js í index.ios.js þá er Header componentið sett inn í App componentið: 
+		const App = () => (
+		  //Það er tómt og má því ritast sem self closing 
+		  <Header />
+		);
+
+
+* JSX : Syntax er jsx sem er extension to write react compontes. notar sama syntax og html. eina leiðin til að comunicate to react native sem renderast á skjá.
+Notað sem maski ofan á javascript component syntaxinn til að auðvelda að geta skrifað .. verður til nested function calls sem er mun lengra og erfiðara að skrifa.
+	Til dæmis: Skrifa / Render text á skjáinn með því að láta component return <Text>Some text..</Text>
+	verður að React.createElement(
+		Text, 
+		null, 
+		"Some text.."
+	);
+	Notar HTML syntax.
+	babeljs.io er síða sem hægt er að nota til að converta jsx to compiled javascript > try it out 
+	// Component
+	const App = () => {
+  		return ( 
+    	 	 <Text> Some Text </Text>
+  		);
+	};
+
+	// refactor with more clean syntax
+	const App = () => (
+	  <Text>Some text</Text>
+	);
+
+* import :
+	react : hvernig component a að haga sér, hvernig á að díla við fullt af compontes og hvernig þeir vinna saman. 
+	react-native : portal to a mobile device. Veit Hvernig á að taka output á compontent og hvernig á að birta hann.
+	
+	Þarf að importa öllu Text og þess háttar libraries til þess að geta notað þau úr reactNative libraryinu.
+	með því að import {Text} from 'react-native' er bara verið að sækja Text úr react native til að nota í stað alls draslisins. 
+
+	Ekki til neinar global breytur. Það þarf að importa öllu
+
+	import fer beint og leitar í module directoryinu (node_modules) og ath hvort það sé þar t.d. react. Þetta er unique strengir en ef þetta eru js skrár sem við skrifum sjálf þá þarf að gera pathið. ./src/...
+
+* Card 
+	einskonar view í ios. sem inniheldur allskonar compontents og dót. 
+
+* Styling
 	
