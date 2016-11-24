@@ -108,8 +108,7 @@ Notað sem maski ofan á javascript component syntaxinn til að auðvelda að ge
 	þarf fyrst að skilgreina propertyin sem á að geta breyst í frá parentinu. meðan childið fær prop object sem parentið providar contentið í.
 		t.d. í Header.js 
 			const Header = (props) => { // Props er javascript object, alltaf þegar maður gerir reference í JS í JSX þá þarf að gera {} utan um það.
-				...
+				<Text style={textStyle}> {props.headerText} </Text> 
 			}
-			}
-		App getur þá kallað í <Header />
+		App getur þá kallað með <Header headerText={'Albums!'} />
 
