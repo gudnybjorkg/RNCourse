@@ -63,4 +63,17 @@ Notað sem maski ofan á javascript component syntaxinn til að auðvelda að ge
 	einskonar view í ios. sem inniheldur allskonar compontents og dót. 
 
 * Styling
-	
+	Ekki mikið af tólum fyrir að sjá um styling. Það þarf að gera allt styling sjálf, by hand.
+	í stað þess að gera sér css skrá þá er all útlit ´i component file. Með því að búa til nýtt object ekki component samt. Svipað og css.  
+		const styles = {
+			textStyle: {
+				fontSize : 20;
+			}
+		};
+	Ég get þa´notað þetta style í componentinum mínum. 
+	const Header = () => {
+	const { textStyle } = styles;
+
+	return <Text>Albums!</Text>;
+};
+	Reglur:  
