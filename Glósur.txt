@@ -71,9 +71,30 @@ Notað sem maski ofan á javascript component syntaxinn til að auðvelda að ge
 			}
 		};
 	Ég get þa´notað þetta style í componentinum mínum. 
+	//Passa að það sé ekki bil á milli = í style 
 	const Header = () => {
-	const { textStyle } = styles;
+		const { textStyle } = styles;
 
-	return <Text>Albums!</Text>;
-};
+		<Text style={textStyle}>Albums!</Text>;
+	};
+	það má líka nota styles.viewStyles
 	Reglur:  
+		þegar maður vill færa til hlutina á skjánum, t.d. texta þá er betra að nota View. 
+		View er notað til að style and position hluti sem tilheyra því viewi á skjánum. 
+* Flexbox
+	hvernig á að staðsetja elements. Svipað og CSS. 
+	system of positioning elements in a container. t.d. hvenrig við viljum staðsetja texta í view. 
+	allt er upphalfega staðsett eins og í html efst í horni vinstra megin. 
+	property: 	
+		* justifyContent: 'flex-end' 
+			justifyContent = færir hlutina í vertical áttir. upp eða niður. Gerir meira en þetta er svona megin aðgerðin
+				felx-end = ýtir því neðst niður í containerinn sem það er í
+				center = setur í miðjuna á containerinum
+				flex-start = fer efst 
+				...
+		* alignItems : 'flex-start'
+			alignItems = færir hlutina í horizontal áttir. til hliðar. Gerir meira en þetta er svona megin aðgerðin
+				flex-start = setur lengst til vinstri í containernum
+				flex-end = setur lengst til hægri í containernum
+				center = setur í miðjuna á containernum
+
