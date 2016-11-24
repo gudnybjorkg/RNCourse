@@ -112,3 +112,5 @@ Notað sem maski ofan á javascript component syntaxinn til að auðvelda að ge
 			}
 		App getur þá kallað með <Header headerText={'Albums!'} />
 
+
+Þú ert í lecture 7 - 28
