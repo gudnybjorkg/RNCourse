@@ -6,14 +6,10 @@ import { Text, View } from 'react-native';
 // Skýra componentinn það sama og nafnið á skránni
 const Header = (props) => { //Hægt er að búa til Header með því að senda í það property
 	//svipaður syntax og í import
-	const { textStyle, viewStyle } = styles; // Velur þau eigindi úr styles sem á nota
+	const { textStyle, viewStyle } = styles; // Velur þau eigindi úr styles sem á að nota
 	// hér mætti líka sleppa þessu og nota beint í View propertyinu style = style.viewStyle
 
 	return (
-		//View er utan um Text elementið
-		//textStyle og viewStyle  er notað hér sem property á Text
-		//Viljum geta breytt textanum í headernum eftir því hvaða content er á skjánum
-		//Matchar prop og það sem er sent í það.
 		<View style={viewStyle}>
 			<Text style={textStyle}> {props.headerText} </Text>
 		</View>

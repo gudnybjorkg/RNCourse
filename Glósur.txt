@@ -123,4 +123,19 @@ Notað sem maski ofan á javascript component syntaxinn til að auðvelda að ge
 				return <Text>..</Text>
 				}
 			}
+			//Þarf að importa Component
+			// þarf alltaf að útfæra renderfallið þegar átt er við class
+			// þegar kallað er á Album list þá mun þetta render fall keyra til að birta á skjá
+			class AlbumList extends Components {
+			  render() {
+			    return (
+			      <View>
+			        <Text>Album List!!!</Text>
+			      </View>
+			    );
+			  } //notar ekki semikommu í class
+			}
+			live cycle methods: þetta bjargar því að class objectið sem er búið til er renderað miðað við það render fall sem það þarf að útfæra.
+			alltaf þegar object á að vera rendered þá er automatic kallað í fallið comonentwillmount sem er hægt að útfæra og láta gera ýmislegt, t.d eitthvað sem þarf að gerast áður. eins og willapear
+			
 Þú ert í lecture 7 -
